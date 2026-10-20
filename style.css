@@ -1,0 +1,147 @@
+@font-face {
+    font-family: poppins_semibold;
+    src: url(/Fonts/Poppins-SemiBold.ttf);
+}
+@font-face {
+    font-family: poppins_medium;
+    src: url(Fonts/Poppins-Medium.ttf);
+}
+@font-face {
+    font-family: Archivo;
+    src: url(/Fonts/ArchivoNarrow-VariableFont_wght.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body,html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: #6290C3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.maincontainer{
+    margin: 32px;
+    width: 600px;
+    height: 400px;
+    padding: 16px;
+
+    border-radius: 24px;
+
+    background-color: #F1FFE7;
+    
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.heading{
+    padding: 12px;
+    display: flex;
+    justify-content: flex-start;
+    align-self: flex-start;
+    font-family: poppins_semibold;
+}
+.heading h1 {
+    display: flex;
+    gap: 12px;
+}
+.heading img{
+    width: 40px;
+    height: 40px;
+    
+}
+main{
+    padding: 12px;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+.addtask{
+    display: flex;
+    gap: 8px;
+}
+.search {
+    min-width: 450px;
+    height: 50px;
+    padding: 12px;
+
+    background-color: #C2E7DA;
+
+    border: none;
+    border-radius: 40px;
+}
+button{
+    width: 70px;
+
+    border: none;
+
+    border-radius: 40px;
+
+    background-color: #BAFF29;
+    
+    cursor: pointer;
+
+    font-family: poppins_medium;
+    font-size: 15px;
+}
+.listContainer{
+    width: 90%;
+}
+h3::before{
+    content: '';
+    position: relative;
+    height: 20px;
+    width: 20px;
+    background-image: url(/Images/radio.png);
+    background-position: center;
+    background-size: cover;
+}
+.task {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.taskText {
+    width: 100%;
+    font-family: archivo ;
+    
+    position: relative;
+
+    color: #1A1B41;
+    
+    user-select: none;
+    display: flex;
+    /* justify-content: space-between; */
+}
+.task h3 span {
+    position: absolute;
+    text-align: center      ;
+    width: 40px;
+    right: 0;
+    top: 1px;
+    border-radius: 50%;
+    line-height: 30px;
+
+    transition: all 0.4s;
+
+}
+.task h3 span:hover{
+    background-color: #cdcccc;
+}
+.checked{
+    text-decoration: line-through;
+}
+h3.checked::before{
+    background-image: url(/Images/accept.png);
+}
